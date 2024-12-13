@@ -4,18 +4,18 @@
 # TODO:
 # Not packaged:
 # /etc/xdg/ui
-%define		kdeframever	6.8
+%define		kdeframever	6.9
 %define		qtver		5.15.2
 %define		kfname		kxmlgui
 
 Summary:	Framework for managing menu and toolbar actions
 Name:		kf6-%{kfname}
-Version:	6.8.0
+Version:	6.9.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	c9dfd32c4e40bbd14ac21eb38f4e32a9
+# Source0-md5:	9dc1eba92e27e79a32e755496bf0fdf5
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
