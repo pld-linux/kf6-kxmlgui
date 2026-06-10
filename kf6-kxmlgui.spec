@@ -68,6 +68,12 @@ an abstract way. The actions are configured through a XML description
 and hooks in the application code. The framework supports merging of
 multiple description for example for integrating actions from plugins.
 
+%description -l pl.UTF-8
+KXMLGUI dostarcza szkielet do zarządzania menu i akcjami paska
+narzędzi w sposób abstrakcyjny. Akcje są konfigurowalne przez opis XML
+i zaczepy w kodzie aplikacji. Szkielet wspiera łączenie wielu opisów,
+na przykład do integracji akcji z wtyczek.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
