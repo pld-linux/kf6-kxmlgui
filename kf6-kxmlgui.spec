@@ -11,7 +11,7 @@
 Summary:	Framework for managing menu and toolbar actions
 Name:		kf6-%{kfname}
 Version:	6.28.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -117,6 +117,8 @@ rm -rf $RPM_BUILD_ROOT
 # not supported by glibc yet
 %{__rm} -rf $RPM_BUILD_ROOT%{_localedir}/{ie,tok}
 
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{nan_TW,nan}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/nan_TW@latin
 %find_lang %{kfname}6
 
 %clean
