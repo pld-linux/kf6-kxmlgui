@@ -11,7 +11,7 @@
 Summary:	Framework for managing menu and toolbar actions
 Name:		kf6-%{kfname}
 Version:	6.29.0
-Release:	3
+Release:	4
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -21,10 +21,11 @@ BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
 BuildRequires:	Qt6PrintSupport-devel >= %{qtver}
-BuildRequires:	Qt6Test-devel >= %{qtver}
+%{?with_tests:BuildRequires:	Qt6Test-devel >= %{qtver}}
+BuildRequires:	Qt6UiTools-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	Qt6Xml-devel >= %{qtver}
-BuildRequires:	cmake >= 3.16
+BuildRequires:	cmake >= 3.29
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	kf6-kconfig-devel >= %{version}
 BuildRequires:	kf6-kconfigwidgets-devel >= %{version}
@@ -34,7 +35,7 @@ BuildRequires:	kf6-kguiaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	kf6-kiconthemes-devel >= %{version}
 BuildRequires:	kf6-kitemviews-devel >= %{version}
-BuildRequires:	kf6-ktextwidgets-devel >= %{version}
+%{?with_tests:BuildRequires:	kf6-ktextwidgets-devel >= %{version}}
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
@@ -82,7 +83,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6DBus-devel >= %{qtver}
 Requires:	Qt6Widgets-devel >= %{qtver}
 Requires:	Qt6Xml-devel >= %{qtver}
-Requires:	cmake >= 3.16
+Requires:	cmake >= 3.29
 Requires:	kf6-kconfig-devel >= %{version}
 Requires:	kf6-kconfigwidgets-devel >= %{version}
 Requires:	kf6-kguiaddons-devel >= %{version}
